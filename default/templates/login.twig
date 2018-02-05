@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Slim Twig</title>
+        <title>Slim-twig</title>
         <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
         <style>
             body {
@@ -26,13 +26,15 @@
         </style>
     </head>
     <body>
-       <h1>Connexion with Slim-Twig</h1>
-        <div>Sign in: 
-        <form action="/login" method="post">
-         <input type="email" name="mail" id="">
-         <input type="password" name="pwd" id="">
-         <input type="submit" value="Go">
-         </form>
-        </div>
+        <p>
+            
+                {% if (is_logged) %}
+                   welcome {{mail}} ;
+                {% else %}
+                    Wrong email or password ! ;
+                    {% endif %}
+                
+            
+        </p>
     </body>
 </html>
